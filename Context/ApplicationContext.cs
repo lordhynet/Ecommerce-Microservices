@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Product.Microservice.Context
 {
-    public class ApplicationContext : DbContext
+    public class ApplicationContext : DbContext, IApplicationContext
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {

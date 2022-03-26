@@ -1528,6 +1528,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "SharedModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/SharedModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SharedModel.dll": {}
+        }
       }
     }
   },
@@ -5712,6 +5722,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "SharedModel/1.0.0": {
+      "type": "project",
+      "path": "../SharedModel/SharedModel.csproj",
+      "msbuildProject": "../SharedModel/SharedModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5724,6 +5739,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.15",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.15",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.14.0",
+      "SharedModel >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -5758,7 +5774,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\hp\\source\\repos\\SharedModel\\SharedModel.csproj": {
+              "projectPath": "C:\\Users\\hp\\source\\repos\\SharedModel\\SharedModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

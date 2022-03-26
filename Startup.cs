@@ -1,20 +1,13 @@
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Product.Microservice.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace crashcourse
 {
@@ -38,8 +31,9 @@ namespace crashcourse
             });
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(
                 Configuration.GetConnectionString("DefaultConnection"),
-                b=> b.MigrationsAssembly(typeof(ApplicationContext).Assembly.FullName)));
+                b => b.MigrationsAssembly(typeof(ApplicationContext).Assembly.FullName)));
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddScoped<IApplicationContext, ApplicationContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

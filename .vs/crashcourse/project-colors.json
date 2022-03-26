@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "124e05be-d5af-4882-b79a-1bee81add9a6": {
+      "ProjectGuid": "124e05be-d5af-4882-b79a-1bee81add9a6",
+      "DisplayName": "Product.Microservice",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
